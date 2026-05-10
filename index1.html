@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="script.js"></script> -->
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Luxurious+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        body{
+          margin: 0px;
+          padding: 0px;
+          border: 0.1px solid rgb(255, 255, 255);
+          height: 100vh;
+        }
+        .container{
+            border: 0.1px solid white;
+            height: 100vh;
+            width: auto;
+           position: relative;
+           
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+           position: relative;
+        }
+
+        .container::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+
+            background-image: url("images/WhatsApp\ Image\ 2026-05-09\ at\ 10.27.51\ PM.jpeg ");
+            background-size: cover;
+            background-position: center;
+
+            filter: blur(5px) brightness(0.9);
+
+            z-index: 0;
+}
+
+.container > *{
+    position: relative;
+    z-index: 1;
+}
+
+        @keyframes appear{
+            from{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .up{
+            
+            animation: appear 0.9s ease-in-out forwards;
+            animation-delay: 0.1s;
+            
+        }
+
+        .up1{
+            animation: appear 0.9s ease-in-out forwards;
+            animation-delay: 1s;
+            font-weight: bolder;
+        }
+
+        @keyframes appear1{
+            from{
+                opacity: 0;
+                transform: translateY(0px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateY(20px);
+            }
+        }
+
+        .down{
+            opacity: 0;
+            animation: appear1 0.9s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        .container > p {
+            height: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: dancing script;
+            color: wheat;
+            font-size: 32px;
+            top: 30vh;
+            opacity: 0;
+        }
+
+        .garland{
+            display: flex;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 1px;
+        }
+
+        .garland img{
+            height: auto;
+            width: 25%;
+            display: inline;
+            padding: 0px;
+            border: 0px;
+            margin: 0px;
+
+        }
+
+        .confetti{
+            height: 50px;
+            position: absolute;
+            bottom: 120px;
+            left: 50px;
+            filter: invert(100%);
+        }
+
+        .confetti1{
+            height: 50px;
+            position: absolute;
+            bottom: 80px;
+            right: 50px;
+            filter: invert(100%);
+        }
+
+        .confetti2{
+            height: 50px;
+            position: absolute;
+            bottom: 320px;
+            right: 130px;
+            filter: invert(100%); 
+        }
+        .confetti3{
+            height: 50px;
+            position: absolute;
+            top: 130px;
+            right: 60px;
+            filter: invert(100%); 
+        }
+
+        .confetti4{
+            height: 50px;
+            position: absolute;
+            top: 110px;
+            left: 60px;
+            filter: invert(100%); 
+        }
+
+        @keyframes float {
+  0%{
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50%{
+    transform: translateY(-7px) translateX(-3px);
+  }
+
+  100%{
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+
+.float{
+  animation: float 4s ease-in-out infinite;
+}
+
+.float1{
+  animation: float 6s ease-in-out infinite;
+}
+
+.clickme{
+    position: absolute;
+    bottom: 30px;
+    animation: appear 0.9s ease-in-out forwards;
+    animation-delay: 1s;
+}
+#clickme{
+    opacity: 1 !important;
+
+    position: absolute !important;
+
+    top: auto !important;
+    bottom: 200px !important;
+
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    z-index: 9999;
+
+    pointer-events: auto;
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container up">
+        <div class="garland down">
+            <img src="images/garland.png" alt="">
+            <img src="images/garland.png" alt="">
+            <img src="images/garland.png" alt="">
+            <img src="images/garland.png" alt="">
+            <img src="images/garland.png" alt="">
+        </div>
+        <p class="up1">Happy Birthday Deshna!!</p>
+        <p style="font-size: 15px;" class="msg up1">Cheers to another year of wonderful adventures.</p>
+        <p style="font-size: 25px; color: white; font-family: caveat; position: absolute;
+    bottom: 10px;
+    animation: appear 0.9s ease-in-out forwards;
+    animation-delay: 1s; left: 40%; transform: translateX(-50%); cursor: pointer; height: auto;" class="clickme" id="clickme" onclick="window.location.href='index2.html'">Click me</p>
+        <img src="images/confetti.png" class="confetti float" alt="">
+        <img src="images/balloons (1).png" class="confetti1 float1" alt="">
+        <img src="images/party-hat.png" class="confetti2 float1" alt="">
+        <img src="images/party.png" class="confetti3 float" alt="">
+        <img src="images/balloons (2).png" class="confetti4 float1" alt="">
+        
+        
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

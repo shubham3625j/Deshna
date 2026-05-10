@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(145, 7, 7);
+        }
+
+        container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            width:100%;
+        }
+
+        @keyframes move {
+  0%{
+    transform: translate(120%,120%) rotate(15deg);
+  }
+
+  25%{
+    transform: translate(90%,70%) rotate(10deg);
+  }
+
+  50%{
+    transform: translate(60%,35%) rotate(5deg);
+  }
+
+  75%{
+    transform: translate(15%,10%) rotate(2deg);
+  }
+
+  100%{
+    transform: translate(-50%,0%) rotate(0deg);
+  }
+        }
+
+        
+
+        .bouquet{
+            position: absolute;
+            height: 150px;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: move 1.5s steps(1) forwards;
+        }
+
+        .container1{
+
+        }
+
+        .envelope{
+            height: 300px;
+            transform: rotate(20deg);
+            position: absolute;
+            bottom: -10%;
+            left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .show{
+            
+            animation: envelope1 1s steps(5) forwards;
+        }
+
+        .page{
+            height: 300px;
+            z-index: 1;
+            transform: rotate(23deg);
+            position: absolute;
+            bottom: -10%;
+        }
+
+        .hidden{
+            opacity: 0;
+
+        }
+
+        @keyframes envelope1 {
+            from{
+                opacity: 0;
+                bottom: -50%;
+            }
+
+            to{
+                opacity: 1;
+                bottom: -10%;
+            }
+
+
+        }
+
+        @keyframes page {
+            0%{
+                transform: translate(10%,-10%) rotate(20deg) rotateY(-180deg) scale(1);
+            }
+            25%{
+                transform: translate(20%,-25%) rotate(18deg) rotateY(-108deg) scale(1.2);
+            }
+            50%{
+                transform: translate(30%,-40%) rotate(12deg) rotateY(-72deg) scale(1.4);
+            }
+            75%{
+                transform: translate(40%,-55%) rotate(6deg) rotateY(-36deg) scale(1.6);
+            }
+            100%{
+                transform: translate(45%,-75%) rotate(0deg)rotateY(0deg) scale(1.8);
+            }
+        }
+
+
+    .pageshow{
+
+        animation: page 1s ease-in-out forwards;
+    }
+
+    .message{
+
+    }
+
+
+    </style>
+
+    
+</head>
+<body>
+    <div class="container" onclick="openLetter()">
+        <img src="images/bouquet_2868648.png" class="bouquet" alt="">
+
+    <div class="container1 hidden" id="container1">
+        <img src="images/ornament-hearts-wands-envelope.png" class="envelope" alt="">
+
+        <img src="images/aa830f9e-16c8-43fd-b71d-bd4d4b65712c.png" class="page" id="page" onclick="openpage()" alt="">
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

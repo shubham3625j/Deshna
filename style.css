@@ -1,0 +1,118 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(145, 7, 7);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes float {
+  0%{
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50%{
+    transform: translateY(-7px) translateX(-3px);
+  }
+
+  100%{
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+.float{
+  animation: float 4s ease-in-out infinite;
+}
+
+.float1{
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes up {
+  0%{
+    transform: translateY(50px) translateX(-50%);
+  }
+
+  100%{
+    transform: translateY(0px) translateX(-50%);
+  }
+}
+
+.float2 {
+  animation: up 1s ease-in-out;
+}
+
+.container{
+  height: 80vh;
+  width: 80vw;
+  background-color: wheat;
+  position: relative;
+
+  
+}
+
+.cake{
+  position: absolute;
+  height: 50px;
+  bottom: 50px;
+  left: 40px;
+}
+
+.baloons{
+  position: absolute;
+  height: 50px;
+  top: 50px;
+  right: 40px;
+}
+
+.env{
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container > p {
+  font-family: Luxurious Script;
+  color: rgb(148, 129, 20);
+  font-size: 30px;
+  font-weight: 600;
+  left: 50%;
+  position: absolute;
+  top: 53px;
+  transform: translateX(-50%);
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+.click{
+  position: absolute;
+  bottom: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: dancing script;
+  color: rgb(185, 0, 31);
+  opacity: 0;
+
+  animation: appear 0.5s ease forwards;
+  animation-delay: 1s;
+}
+
+
+
+
+
+
