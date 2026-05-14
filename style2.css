@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Luxurious+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+    height: 100vh;
+    overflow:hidden;
+}
+
+        body{
+            background-color: rgb(145, 7, 7);
+        }
+
+        container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            width:100%;
+        }
+
+        @keyframes move {
+  0%{
+    transform: translate(150%,300%) rotate(15deg);
+  }
+
+  12.5%{
+    transform: translate(125%,262.5%) rotate(10deg);
+  }
+
+  25%{
+    transform: translate(100%,225%) rotate(0deg);
+  }
+
+  37.5%{
+    transform: translate(75%,187.5%) rotate(-22deg);
+  }
+
+  50%{
+    transform: translate(50%,150%) rotate(0deg);
+  }
+
+  62.5%{
+    transform: translate(25%,112.5%) rotate(22deg);
+  }
+
+  75%{
+    transform: translate(0%,75%) rotate(0deg);
+  }
+
+  87.5%{
+    transform: translate(-25%,37.5%) rotate(-22deg);
+  }
+
+  100%{
+    transform: translate(-50%,0%) rotate(0deg);
+  }
+        }
+
+        
+
+        .bouquet{
+            position: absolute;
+            height: 150px;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: move 3s steps(1) forwards;
+        }
+
+        .container1{
+            display: flex;
+            position: absolute;
+            bottom: 20%;
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+            left: 5%;
+
+            /* transform: rotate(90deg); */
+            /* transform-origin: bottom center; */
+            
+        }
+
+        .envelope{
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .page{
+            height: 350px;
+            
+            position: absolute;
+            bottom: 10;
+            left: 20%;    
+            transform: translate(12%);
+        }
+
+        .show{     
+            animation: envelope1 1.5s steps(10) forwards; 
+            opacity: 1;  
+            animation-delay: 4s; 
+        }
+
+      
+
+        .hidden{
+            opacity: 0;
+
+        }
+
+    @keyframes envelope1 {
+        
+    0%{
+        opacity:0;
+        transform:
+        translate(-250px,250px)
+        rotate(-70deg)
+        scale(0.3);
+    }
+
+    100%{
+        opacity:1;
+        transform:
+        translate(40px,-120px)
+        rotate(35deg)
+        scale(1.05);
+    }
+
+
+
+        }
+
+        @keyframes page {
+            0%{
+                transform: translate(10%,-10%) rotate(20deg) rotateY(-180deg) scale(1);
+            }
+            25%{
+                transform: translate(20%,-25%) rotate(18deg) rotateY(-108deg) scale(1.2);
+            }
+            50%{
+                transform: translate(30%,-40%) rotate(12deg) rotateY(-72deg) scale(1.4);
+            }
+            75%{
+                transform: translate(40%,-55%) rotate(6deg) rotateY(-36deg) scale(1.6);
+            }
+            100%{
+
+
+                transform: translate(20%,-100%) rotate(-35deg)rotateY(0deg) scale(1.8);
+            }
+        }
+
+
+    .pageshow{
+
+        animation: page 1s ease-in-out forwards;
+        z-index: 999;
+    }
+
+    .message{
+
+    }
+
+        .sentence{
+            position: absolute;
+            top: 52%;
+              left: 50%;
+  transform: translateX(-50%);
+
+font-family: dancing script;
+      /* font-size:60px; */
+      font-weight:bolder;
+      color:white;
+      display:flex;
+      gap:10px;
+    }
+
+    .word{
+        min-width: 20px;
+      opacity:0;
+    padding: 2px;
+    margin: 2px;
+    display:flex;
+  justify-content:center;
+  text-align:center;
+      /* transform:translateY(120px); */
+      animation:slideWord 2s steps(5) forwards;
+    }
+
+    /* Different delays for each word */
+    .word:nth-child(1){
+      animation-delay:0.1s;
+    }
+
+    .word:nth-child(2){
+      animation-delay:0.9s;
+    }
+
+    .word:nth-child(3){
+      animation-delay:1.7s;
+    }
+
+    .word:nth-child(4){
+      animation-delay:2.5s;
+    }
+
+    @keyframes slideWord{
+  0%{
+    opacity: 0;
+    transform: translate(-200%,-200%) rotate(15deg);
+  }
+
+  12.5%{
+    transform: translate(-180%,-190%) rotate(10deg);
+  }
+
+  25%{
+    transform: translate(-100%,-220%) rotate(0deg);
+  }
+
+  37.5%{
+    transform: translate(-75%,-184%) rotate(-22deg);
+  }
+
+  50%{
+    transform: translate(-50%,-148%) rotate(0deg);
+  }
+
+  62.5%{
+    transform: translate(25%,-112%) rotate(22deg);
+  }
+
+  75%{
+    transform: translate(0%,-76%) rotate(0deg);
+  }
+
+  87.5%{
+    transform: translate(25%,-40%) rotate(-22deg);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(50%,0%) rotate(0deg);
+  }
+    }
+
+.page3{
+        height: 350px;
+    width: 285px;
+}
+
+.page5{
+    position: absolute;
+    height: 350px;
+    width: 285px;
+    transform: translate(1%);
+    background-image: url(images/premium_photo-1672944876342-4090164e1c04.avif);
+    object-fit: cover;
+
+}
+
+.page6{
+    position: absolute;
+    background-image: url(images/premium_photo-1672944876342-4090164e1c04.avif);
+    top: 10px;
+
+}
+
+
+:root{
+  --primary: white;
+  --bg-color: #254336;
+  --bg-envelope-color: #f5edd1;
+  --envelope-tab: #ecdeb8;
+  --envelope-cover: #e6cfa7;
+  --shadow-color: #1c1c1c;
+  --heart-color: #c2465d;
+}
+body{
+  /* margin: 0;
+  padding: 0; */
+  /* box-sizing: border-box; */
+  /* background: var(--bg-color); */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.containerr {
+    color: rgb(145, 7, 7);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: -250px;
+  left: -90px;
+  transform: rotate(29deg);
+  z-index: 999999;
+}
+.container > .envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+}
+
+.shaking{
+    animation: shake 2s infinite;
+    animatio: 2s;
+    color: white;
+    font-family: dancing script;
+    font-weight: lighter;
+}
+.envelope-wrapper > .envelope {
+
+  position: relative;
+  width: 350px;
+  height: 250px;
+}
+.envelope-wrapper > .envelope::before {
+  
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 175px solid transparent;
+  border-left: 175px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+.envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 175px solid var(--envelope-cover);
+  border-bottom: 120px solid var(--envelope-cover);
+  border-left: 175px solid var(--envelope-cover);
+}
+.sincerely {
+  text-align: right;
+}
+
+.envelope > .letter {
+
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 80%;
+  background: var(--primary);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 20px 10px;
+}
+
+.envelope > .letter > .text {
+  font-family: "Caveat", cursive;
+  font-style: normal;
+  color: var(--txt-color);
+  text-align: justify;
+  font-size: 11px;
+  padding-right: 2px;
+}
+
+.text strong {
+  font-size: 12px;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--heart-color);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 1px 6px var(--shadow-color);
+  cursor: pointer;
+}
+.heart:before, 
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--heart-color);
+  border-radius: 50%;
+}
+.heart:before {
+  top: -7.5px;
+}
+.heart:after {
+  right: 7.5px;
+}
+.flap > .envelope:before {
+  
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+.flap > .envelope > .letter {
+   
+  bottom: 100px;
+  transform: scale(1.5);
+  transition-delay: 1s;
+}
+.flap > .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
+
+@keyframes shake{
+    0%{
+        transform:translateX(0);
+    }
+
+    5%{
+        transform:translateX(-5px);
+    }
+
+    10%{
+        transform:translateX(5px);
+    }
+
+    15%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+}
+
